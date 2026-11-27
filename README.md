@@ -31,7 +31,7 @@ so whatever runs this library must be on that network.
 ## Tests
 
 ```sh
-pip install -e '.[test]' && pytest
+pip install -e ../nlp-dedup -e '.[test]' && pytest
 ```
 
 ## History

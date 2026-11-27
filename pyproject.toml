@@ -12,7 +12,7 @@ dependencies = [
     "pydantic>=2.9",
     "PyYAML>=6.0",
     "neo4j>=5.24",
-    "nlp-dedup @ git+https://github.com/alvarodelser/nlp-dedup.git",
+    "nlp-dedup",   # local repo, no remote: pip install -e ../nlp-dedup first
 ]
 
 [project.optional-dependencies]
