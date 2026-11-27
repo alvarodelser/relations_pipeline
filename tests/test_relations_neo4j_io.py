@@ -1,4 +1,4 @@
-from pipelines.relations.neo4j_io import Graph
+from relations_pipeline.neo4j_io import Graph
 
 
 class _FakeSession:

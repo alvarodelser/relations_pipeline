@@ -1,9 +1,9 @@
 import json
 from unittest.mock import MagicMock
 
-from nlp.ner.schema_types import ExtractedEntity, ExtractedRelation, NerResponse
-from nlp.resolver.types import ResolvedEntity, ResolvedRelation, ResolveResponse
-from pipelines.relations import orchestrator as orch
+from relations_pipeline.types import ExtractedEntity, ExtractedRelation, NerResponse
+from relations_pipeline.types import ResolvedEntity, ResolvedRelation, ResolveResponse
+from relations_pipeline import orchestrator as orch
 
 USE_CASE = "financial_flows"
 

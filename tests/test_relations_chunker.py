@@ -1,4 +1,4 @@
-from pipelines.relations import chunker
+from relations_pipeline import chunker
 
 
 def test_empty_text_returns_no_chunks():

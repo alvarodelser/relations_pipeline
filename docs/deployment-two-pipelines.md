@@ -1,5 +1,9 @@
 # Two-Pipeline Deployment Plan
 
+> **Superseded (2026-11-27).** nlp_service was split: the modules are the shared `wiig-*` services,
+> dedup is the `nlp-dedup` library, and each pipeline is its own repo (`news-pipeline`, this one).
+> Kept for the reasoning; the wiring it describes no longer applies.
+
 **Scope:** everything that must be wired in to run the **news pipeline** (`pipelines/news`) and the
 **relation pipeline** (`pipelines/relations`) in production. Date: 2026-06-06.
 

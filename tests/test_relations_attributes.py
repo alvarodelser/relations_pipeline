@@ -1,4 +1,4 @@
-from pipelines.relations.attributes import build_attribute_index, join_entity_attributes
+from relations_pipeline.attributes import build_attribute_index, join_entity_attributes
 
 
 def _idx(records):

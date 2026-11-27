@@ -11,3 +11,7 @@ data/
 *.index
 .venv/
 venv/
+
+*.egg-info/
+.venv/
+__pycache__/

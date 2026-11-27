@@ -1,6 +1,6 @@
 import json
 
-from pipelines.relations.merge import _merge_entity_cluster, _merge_relation_cluster
+from relations_pipeline.merge import _merge_entity_cluster, _merge_relation_cluster
 
 
 def test_merge_entity_picks_longest_name_and_unions():

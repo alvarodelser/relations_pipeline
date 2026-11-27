@@ -2,8 +2,8 @@ import textwrap
 
 import pytest
 
-from pipelines.relations import ontology
-from nlp.ner.schema_types import ExtractionSchema
+from relations_pipeline import ontology
+from relations_pipeline.types import ExtractionSchema
 
 
 # --- shipped financial_flows ontology ---

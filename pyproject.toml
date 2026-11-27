@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relations-pipeline"
+version = "0.1.0"
+description = "Entity and relation extraction into Weaviate, consolidated into a Neo4j graph"
+requires-python = ">=3.10"
+dependencies = [
+    "httpx>=0.27",
+    "pydantic>=2.9",
+    "PyYAML>=6.0",
+    "neo4j>=5.24",
+    "nlp-dedup @ git+https://github.com/alvarodelser/nlp-dedup.git",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["relations_pipeline"]

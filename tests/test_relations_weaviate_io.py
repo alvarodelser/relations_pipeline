@@ -2,7 +2,7 @@ import json
 
 import httpx
 
-from pipelines.relations.weaviate_io import Client, FinalClient
+from relations_pipeline.weaviate_io import Client, FinalClient
 
 
 def _make(cls, handler):
