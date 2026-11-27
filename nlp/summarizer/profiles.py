@@ -21,8 +21,10 @@ _FORMULA_SCHEMA = {
             "type": "object",
             "properties": {"symbol": {"type": "string"}, "meaning": {"type": "string"},
                            "kind": {"type": "string", "enum": ["output", "input", "parameter", "constant"]},
-                           "value": {"type": ["number", "null"]}, "unit": {"type": "string"}},
-            "required": ["symbol", "meaning", "kind", "value", "unit"]}},
+                           "value": {"type": ["number", "null"]}, "unit": {"type": "string"},
+                           # the values it can plausibly take: the client's axis and calculator bounds
+                           "min": {"type": ["number", "null"]}, "max": {"type": ["number", "null"]}},
+            "required": ["symbol", "meaning", "kind", "value", "unit", "min", "max"]}},
         "conditions":  {"type": "array", "items": {"type": "string"}},
         "source_text": {"type": "string"},
     },
@@ -95,7 +97,7 @@ PROFILES: dict[str, Profile] = {
         output_keys=("has_formula", "literal", "expression", "variables", "conditions", "source_text"),
         extract_field=None,
         validate=formula.check,
-        retry_suffix="\nRECUERDA: «SALIDA = expresión» con la sintaxis indicada y cada símbolo declarado en variables.",
+        retry_suffix="\nRECUERDA: «SALIDA = expresión» con la sintaxis indicada, cada símbolo declarado en variables y min <= max.",
     ),
     "aggregate": Profile(
         name="aggregate",

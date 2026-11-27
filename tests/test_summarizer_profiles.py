@@ -37,3 +37,7 @@ def test_formula_check_accepts_declared_symbols_and_tiers():
     assert not ok and "Bmax" in why
     assert not check({"has_formula": True, "expression": "P = __import__('os')", "variables": v("P")})[0]
     assert not check({"has_formula": True, "expression": "80 * Bi", "variables": v("Bi")})[0]
+    years = [{"symbol": "P"}, {"symbol": "A", "min": 0, "max": 5}]
+    assert check({"has_formula": True, "expression": "P = if(A >= 3, 7, 0)", "variables": years})[0]
+    ok, why = check({"has_formula": True, "expression": "P = if(A >= 3, 7, 0)", "variables": [{"symbol": "P"}, {"symbol": "A", "min": 5, "max": 0}]})
+    assert not ok and "A" in why

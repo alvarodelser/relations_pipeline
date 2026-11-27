@@ -1,0 +1,122 @@
+[
+  {
+    "id": "topic-001",
+    "description": "Bike lane inauguration — single child fires → resolve to 'carril bici'",
+    "input": {
+      "headline": "Sevilla inaugura el nuevo carril bici de la Avenida de la Constitución",
+      "text": "El Ayuntamiento de Sevilla ha inaugurado hoy un nuevo carril bici de 2,3 kilómetros segregado del tráfico en la Avenida de la Constitución. El nuevo vial ciclista cuenta con señalización luminosa y conexión directa con la red existente de carriles bici de la ciudad. La obra ha costado 1,2 millones de euros y es parte del plan de movilidad ciclista municipal."
+    },
+    "expected": {
+      "topics": ["carril bici"],
+      "note": "carril bici fires alone within infraestructura ciclista → stays specific"
+    }
+  },
+  {
+    "id": "topic-002",
+    "description": "Cycling infrastructure broadly — both children fire → collapse to parent",
+    "input": {
+      "headline": "Madrid amplía su red ciclista con nuevos carriles y aparcabicis cubiertos",
+      "text": "El Ayuntamiento de Madrid ha presentado un paquete de infraestructura ciclista que incluye 15 kilómetros de nuevos carriles bici segregados y la instalación de 800 plazas de aparcamiento de bicicletas cubierto en estaciones de metro y centros de trabajo. La iniciativa busca consolidar la red de carril bici y resolver el problema del aparcamiento de bicicletas, que frena el uso cotidiano de la bici en la ciudad."
+    },
+    "expected": {
+      "topics": ["infraestructura ciclista"],
+      "note": "carril bici + aparcamiento de bicicletas both fire → collapse to parent"
+    }
+  },
+  {
+    "id": "topic-003",
+    "description": "E-scooter regulation — single child fires → resolve to 'patinete eléctrico'",
+    "input": {
+      "headline": "Barcelona endurece la regulación del patinete eléctrico tras el aumento de accidentes",
+      "text": "El Ayuntamiento de Barcelona ha aprobado una nueva ordenanza que limita la circulación de patinetes eléctricos a los carriles bici y prohíbe su uso en aceras y zonas peatonales. La norma también obliga a los operadores de patinetes de alquiler a reducir su flota en las zonas de alta densidad peatonal del centro de la ciudad."
+    },
+    "expected": {
+      "topics": ["patinete eléctrico"],
+      "note": "patinete eléctrico fires alone within movilidad personal eléctrica"
+    }
+  },
+  {
+    "id": "topic-004",
+    "description": "E-bike and e-scooter both mentioned — both children fire → collapse to parent",
+    "input": {
+      "headline": "Valencia regula la convivencia entre bicicletas eléctricas y patinetes en la vía urbana",
+      "text": "El Ayuntamiento de Valencia ha aprobado un reglamento que unifica las normas de circulación para bicicletas eléctricas y patinetes eléctricos. Ambos vehículos de movilidad personal eléctrica deberán circular por el carril bici, con límites de velocidad distintos según el tipo de vehículo. La norma nace de los conflictos registrados entre usuarios de bicicletas eléctricas, patinetes eléctricos y peatones en los últimos meses."
+    },
+    "expected": {
+      "topics": ["movilidad personal eléctrica"],
+      "note": "patinete eléctrico + bicicleta eléctrica both fire → collapse to parent"
+    }
+  },
+  {
+    "id": "topic-005",
+    "description": "Pedestrianisation only — single child fires → resolve to 'peatonalización'",
+    "input": {
+      "headline": "Bilbao convierte el casco viejo en zona peatonal permanente",
+      "text": "El Ayuntamiento de Bilbao ha aprobado la peatonalización definitiva de las siete calles del casco viejo, prohibiendo el acceso de vehículos motorizados salvo residentes y servicios de emergencia. La medida convierte 1,8 hectáreas en espacio exclusivo para peatones y ciclistas, con nuevas terrazas y zonas de descanso."
+    },
+    "expected": {
+      "topics": ["peatonalización"],
+      "note": "peatonalización fires alone within urbanismo activo"
+    }
+  },
+  {
+    "id": "topic-006",
+    "description": "Pedestrianisation + tactical urbanism both mentioned → collapse to 'urbanismo activo'",
+    "input": {
+      "headline": "Zaragoza peatonaliza la plaza del Pilar con urbanismo táctico provisional",
+      "text": "El Ayuntamiento de Zaragoza ha iniciado la peatonalización provisional de la plaza del Pilar mediante técnicas de urbanismo táctico: pintura en el asfalto, maceteros y mobiliario temporal para delimitar los espacios. Si el piloto tiene éxito, la peatonalización se convertirá en permanente y las obras de urbanismo táctico serán sustituidas por infraestructura definitiva."
+    },
+    "expected": {
+      "topics": ["urbanismo activo"],
+      "note": "peatonalización + urbanismo táctico both fire → collapse to parent"
+    }
+  },
+  {
+    "id": "topic-007",
+    "description": "Cyclist accident → resolve to 'accidente de tráfico'",
+    "input": {
+      "headline": "Un ciclista resulta herido grave tras ser arrollado por un turismo en Madrid",
+      "text": "Un ciclista de 34 años ha resultado herido grave esta mañana tras ser arrollado por un turismo que se saltó un semáforo en rojo en la intersección de la Calle Serrano con la Calle Ortega y Gasset. El accidente de tráfico ha reavivado el debate sobre la seguridad de los ciclistas en vías sin carril bici segregado."
+    },
+    "expected": {
+      "topics": ["accidente de tráfico"],
+      "note": "accidente de tráfico fires alone within seguridad vial"
+    }
+  },
+  {
+    "id": "topic-008",
+    "description": "Municipal budget — single child 'presupuesto municipal' fires",
+    "input": {
+      "headline": "Valencia destina 8 millones del presupuesto municipal a infraestructura ciclista en 2026",
+      "text": "El Ayuntamiento de Valencia ha incluido en los presupuestos municipales de 2026 una partida de 8 millones de euros para la ampliación de la red de carriles bici y la renovación del aparcamiento de bicicletas en los principales intercambiadores de transporte. La inversión es la mayor destinada a movilidad ciclista en la historia del municipio."
+    },
+    "expected": {
+      "topics": ["presupuesto municipal"],
+      "note": "presupuesto municipal fires alone within política de movilidad"
+    }
+  },
+  {
+    "id": "topic-009",
+    "description": "Regulation + budget + ZBE all mentioned → collapse to 'política de movilidad'",
+    "input": {
+      "headline": "Madrid aprueba un paquete de política de movilidad con ZBE, regulación y presupuesto ampliado",
+      "text": "El Ayuntamiento de Madrid ha aprobado un conjunto de medidas que incluye la ampliación de las zonas de bajas emisiones a diez nuevos distritos, una nueva regulación de movilidad para patinetes y bicicletas de alquiler, y un incremento del presupuesto municipal destinado a infraestructura de transporte activo. El paquete será financiado con fondos europeos y presupuesto propio del ayuntamiento."
+    },
+    "expected": {
+      "topics": ["política de movilidad"],
+      "note": "regulación + presupuesto municipal + ZBE all fire → collapse to parent"
+    }
+  },
+  {
+    "id": "topic-010",
+    "description": "Sport cycling race (OOS) — no taxonomy branch should fire",
+    "input": {
+      "headline": "La Vuelta a España 2026 pasa por el centro de Madrid en su etapa final",
+      "text": "La vigésima primera etapa de la Vuelta a España 2026 transcurrirá por el centro de Madrid, con llegada en la Plaza de Cibeles. Miles de aficionados al ciclismo de competición se esperan en las calles del recorrido para ver a los corredores profesionales disputar el sprint final de la carrera ciclista."
+    },
+    "expected": {
+      "topics": [],
+      "note": "sport cycling — no mobility topic should reach threshold"
+    }
+  }
+]

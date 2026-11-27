@@ -1,0 +1,98 @@
+[
+  {
+    "id": "oos-001",
+    "description": "Bike lane opening in Seville — in_scope",
+    "input": {
+      "headline": "Sevilla inaugura un nuevo carril bici en la avenida de la Palmera",
+      "text": "El Ayuntamiento de Sevilla ha inaugurado esta mañana un nuevo carril bici de 2,4 kilómetros en la avenida de la Palmera, conectando el Parque de María Luisa con el barrio de Los Remedios. La nueva infraestructura ciclista, que ha supuesto una inversión de 1,2 millones de euros, dispone de separación física del tráfico rodado y señalización luminosa en los cruces más conflictivos. El concejal de Movilidad ha destacado que el proyecto forma parte del Plan de Movilidad Sostenible 2025-2030 del municipio."
+    },
+    "expected": {
+      "verdict": "in_scope",
+      "trigger": null
+    }
+  },
+  {
+    "id": "oos-002",
+    "description": "Tour de España race coverage — out_scope via blacklist (ciclismo deportivo)",
+    "input": {
+      "headline": "La Vuelta a España pasa mañana por Burgos con tres sprints intermedios",
+      "text": "La vigésima etapa de la Vuelta a España recorrerá mañana 178 kilómetros entre Aranda de Duero y Burgos, con tres puntos de sprint intermedio y la llegada al esprint al estadio municipal. El pelotón profesional, liderado por el corredor esloveno en la clasificación general, afronta las últimas jornadas antes de la crono final en Madrid. Los organizadores de la carrera han coordinado con la DGT los cortes de tráfico necesarios en las carreteras nacionales afectadas por el recorrido ciclista de competición."
+    },
+    "expected": {
+      "verdict": "out_scope",
+      "trigger": "blacklist"
+    }
+  },
+  {
+    "id": "oos-003",
+    "description": "Mountain biking trail article — out_scope via blacklist (senderismo/montaña)",
+    "input": {
+      "headline": "La Sierra de Guadarrama abre tres nuevas rutas de BTT para este verano",
+      "text": "La Comunidad de Madrid ha habilitado tres nuevos itinerarios de bicicleta de montaña en la Sierra de Guadarrama, con dificultad media y alta, aptos para ciclistas experimentados. Las rutas discurren por pistas forestales y senderos de montaña, con desniveles acumulados de entre 800 y 1.400 metros. Los tramos están señalizados con balizas y mapas QR accesibles desde el móvil. Los gestores del Parque Nacional recomiendan el uso de casco y equipo de hidratación dado el carácter técnico del terreno y la distancia de los núcleos urbanos."
+    },
+    "expected": {
+      "verdict": "out_scope",
+      "trigger": "blacklist"
+    }
+  },
+  {
+    "id": "oos-004",
+    "description": "Housing construction plan with no mobility content — out_scope via failed_whitelist",
+    "input": {
+      "headline": "Zaragoza aprueba 800 nuevas viviendas de protección oficial en el barrio de Valdespartera",
+      "text": "El pleno del Ayuntamiento de Zaragoza ha aprobado un plan especial para la construcción de 800 viviendas de protección oficial en el barrio de Valdespartera. La iniciativa, promovida por la empresa municipal de vivienda, contempla bloques de entre cuatro y siete alturas con certificación energética A y zonas comunes ajardinadas. Las obras comenzarán en el primer trimestre del próximo año con un presupuesto total de 62 millones de euros. El alcalde ha subrayado que el proyecto responde a la demanda creciente de alquiler asequible en la ciudad."
+    },
+    "expected": {
+      "verdict": "out_scope",
+      "trigger": "failed_whitelist"
+    }
+  },
+  {
+    "id": "oos-005",
+    "description": "E-scooter regulation in city — in_scope",
+    "input": {
+      "headline": "Valencia aprueba la nueva ordenanza municipal para patinetes eléctricos",
+      "text": "El Ayuntamiento de Valencia ha aprobado en pleno la nueva ordenanza que regula la circulación de patinetes eléctricos en el municipio. La normativa establece una velocidad máxima de 20 km/h en carriles bici y prohíbe la circulación por aceras y zonas peatonales. Los operadores de servicios de movilidad compartida deberán limitar su flota a 3.000 unidades y habilitar zonas de aparcamiento delimitadas. Las infracciones se sancionarán con multas de entre 100 y 500 euros. La ordenanza entrará en vigor el próximo mes tras su publicación en el Boletín Oficial Municipal."
+    },
+    "expected": {
+      "verdict": "in_scope",
+      "trigger": null
+    }
+  },
+  {
+    "id": "oos-006",
+    "description": "Pedestrianisation plan with brief marathon mention — in_scope (mobility dominates)",
+    "input": {
+      "headline": "Bilbao avanza en la peatonalización del casco viejo con nuevas restricciones al tráfico",
+      "text": "El Ayuntamiento de Bilbao ha presentado el proyecto definitivo para la peatonalización progresiva del casco viejo, que eliminará el tráfico privado de las Siete Calles a partir del próximo otoño. La medida, parte del plan de movilidad sostenible municipal, incluye la ampliación de aceras, nuevo pavimento y mobiliario urbano adaptado. El área peatonal se extenderá 1,8 hectáreas y se conectará con los carriles bici existentes en el Paseo del Arenal. El Maratón de Bilbao, que discurre puntualmente por la zona, adaptará su recorrido sin incidencias según los organizadores."
+    },
+    "expected": {
+      "verdict": "in_scope",
+      "trigger": null
+    }
+  },
+  {
+    "id": "oos-007",
+    "description": "Athletics championship — out_scope via blacklist (evento deportivo)",
+    "input": {
+      "headline": "Madrid acogerá el Campeonato de España de Atletismo en agosto",
+      "text": "El Estadio Vallehermoso de Madrid será la sede del Campeonato de España Absoluto de Atletismo el próximo mes de agosto, con la participación de más de 600 atletas de todas las federaciones territoriales. La competición incluirá pruebas de pista y campo, desde los 100 metros lisos hasta el lanzamiento de martillo. La Federación Española de Atletismo ha confirmado la presencia de los principales candidatos olímpicos como parte de la preparación para los Juegos de Los Ángeles 2028. Se esperan más de 15.000 espectadores a lo largo de los tres días de competición atlética."
+    },
+    "expected": {
+      "verdict": "out_scope",
+      "trigger": "blacklist"
+    }
+  },
+  {
+    "id": "oos-008",
+    "description": "Cycling infrastructure article with minor race mention — in_scope (infrastructure dominates)",
+    "input": {
+      "headline": "Málaga estrena 6 km de carril bici segregado en el paseo marítimo",
+      "text": "Málaga ha inaugurado un nuevo tramo de carril bici segregado de seis kilómetros a lo largo del paseo marítimo de La Malagueta y El Palo, conectando el centro con los barrios orientales de la ciudad. La infraestructura, financiada con fondos europeos del programa FEDER, incorpora señalización luminosa, aparcabicis cubiertos cada 500 metros y acceso a préstamo de bicicletas públicas. El concejal de Movilidad Sostenible ha destacado que el carril formará parte de la red ciclista metropolitana prevista para 2027. La Vuelta Ciclista a Málaga pasará por el tramo el próximo fin de semana de forma puntual."
+    },
+    "expected": {
+      "verdict": "in_scope",
+      "trigger": null
+    }
+  }
+]

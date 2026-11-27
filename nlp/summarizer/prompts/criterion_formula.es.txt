@@ -25,12 +25,13 @@ QUÉ DEVOLVER
 - variables: TODOS los símbolos de la expresión, incluida la salida, cada uno con:
   symbol (igual que en la expresión), meaning (qué es, en español, breve y preciso),
   kind: output (la puntuación obtenida), input (lo que oferta cada licitador), parameter (un dato del expediente o de las demás ofertas, como el presupuesto base o la oferta más baja), constant (un número fijo como los puntos máximos),
-  value: su valor si el texto lo da (puntos máximos, presupuesto base...) o null, unit: «puntos», «euros», «%», «años»... o "".
+  value: su valor si el texto lo da (puntos máximos, presupuesto base...) o null, unit: «puntos», «euros», «%», «años»... o "",
+  min y max: los valores que el símbolo puede tomar de forma plausible. Primero los que dé el texto («de 0 a 5 años», «máximo 3 mejoras», el último tramo del baremo, la baja máxima que se puntúa); si no los da, unos razonables para lo que mide (un porcentaje entre 0 y 100, unos años de compromiso entre 0 y unos pocos más que el último tramo, un precio entre una baja grande y el presupuesto base). Para la salida, de 0 a los puntos del criterio. null en las constantes.
 - conditions: reglas que la expresión no recoge (umbrales de saciedad, bajas anormales, redondeos, exclusiones), copiadas o resumidas del texto. Lista vacía si no hay.
 - source_text: el fragmento literal del texto donde está la fórmula o la regla. "" si no hay.
 
 REGLAS
 ======
 - Si has_formula es false: expression "", variables [], conditions [], source_text "".
-- No inventes cifras: si el texto no da un valor, value es null.
+- No inventes cifras: si el texto no da un valor, value es null. min y max sí pueden ser estimados.
 - Devuelve únicamente JSON con los campos indicados.

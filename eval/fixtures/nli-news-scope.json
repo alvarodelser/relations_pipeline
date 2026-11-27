@@ -1,0 +1,89 @@
+[
+  {
+    "id": "scope-001",
+    "description": "National cycling safety law — national scope, no city candidates",
+    "input": {
+      "headline": "España aprueba la nueva Ley de Seguridad Ciclista para todas las vías urbanas e interurbanas",
+      "text": "El Congreso de los Diputados ha aprobado por amplia mayoría la nueva Ley de Seguridad Ciclista, que obliga a todos los municipios españoles con más de 10.000 habitantes a disponer de infraestructura ciclista segregada antes de 2030. La norma también establece un fondo estatal de 300 millones de euros para cofinanciar carriles bici en capitales de provincia y endurece las sanciones al tráfico motorizado que invada las vías ciclistas. El Ministerio de Transportes coordinará la implantación con las comunidades autónomas y ayuntamientos a través de un plan de acción nacional.",
+      "city_candidates": []
+    },
+    "expected": {
+      "scope": "national",
+      "city": null
+    }
+  },
+  {
+    "id": "scope-002",
+    "description": "Cataluña regional sustainable mobility plan — regional scope, no city candidates",
+    "input": {
+      "headline": "Cataluña presenta su Plan Regional de Movilidad Sostenible 2025-2030",
+      "text": "La Generalitat de Cataluña ha presentado el Plan Regional de Movilidad Sostenible 2025-2030, que contempla la creación de una red ciclista intercomarcal de 1.200 kilómetros que conectará las principales capitales de comarca de la región. El plan, dotado con 450 millones de euros procedentes de fondos europeos y autonómicos, incluye también la implantación de zonas de bajas emisiones en todos los municipios catalanes de más de 20.000 habitantes. La consejera de Territorio ha explicado que la iniciativa coordinará actuaciones en las cuatro provincias catalanas sin centrarse en ningún municipio concreto.",
+      "city_candidates": []
+    },
+    "expected": {
+      "scope": "regional",
+      "city": null
+    }
+  },
+  {
+    "id": "scope-003",
+    "description": "Madrid bike lane expansion — city scope, candidates Madrid and Barcelona",
+    "input": {
+      "headline": "Madrid amplía su red de carriles bici con 40 nuevos kilómetros en los distritos periféricos",
+      "text": "El Ayuntamiento de Madrid ha presentado el proyecto de expansión de la red ciclista municipal, que añadirá 40 kilómetros de carril bici segregado en los distritos de Vallecas, Carabanchel y Hortaleza durante el próximo ejercicio. La inversión total asciende a 28 millones de euros y está financiada parcialmente con fondos de recuperación europeos. Los nuevos tramos conectarán los barrios periféricos con las vías ciclistas existentes en el centro, completando los ejes Norte-Sur y Este-Oeste de la red. El concejal de Movilidad de Madrid ha señalado que el objetivo es triplicar el número de desplazamientos en bicicleta en el municipio para 2028.",
+      "city_candidates": [
+        "Madrid",
+        "Barcelona"
+      ]
+    },
+    "expected": {
+      "scope": "city",
+      "city": "Madrid"
+    }
+  },
+  {
+    "id": "scope-004",
+    "description": "Barcelona Superilla pedestrianisation — city scope, candidates Barcelona and Valencia",
+    "input": {
+      "headline": "Barcelona extiende el modelo Superilla a cuatro nuevos barrios del Eixample",
+      "text": "El Ayuntamiento de Barcelona ha anunciado la extensión del modelo Superilla a cuatro nuevos sectores del distrito del Eixample, con la peatonalización de 21 manzanas adicionales y la reordenación del tráfico rodado en las calles interiores. Las obras, que comenzarán en primavera, incluirán la plantación de 1.500 árboles, la creación de zonas de juego y descanso y la instalación de aparcabicis cubiertos en todos los viales afectados. La alcaldesa de Barcelona ha defendido el proyecto como el mayor avance en urbanismo táctico de la ciudad desde la transformación de Las Ramblas.",
+      "city_candidates": [
+        "Barcelona",
+        "Valencia"
+      ]
+    },
+    "expected": {
+      "scope": "city",
+      "city": "Barcelona"
+    }
+  },
+  {
+    "id": "scope-005",
+    "description": "Article covers Seville and Málaga equally but street is in Seville — city scope, expected Sevilla",
+    "input": {
+      "headline": "Sevilla y Málaga lideran la movilidad ciclista en Andalucía según el nuevo informe regional",
+      "text": "Un informe de la Junta de Andalucía sitúa a Sevilla y Málaga como las ciudades andaluzas con mayor implantación de infraestructura ciclista urbana. Sevilla acumula 185 kilómetros de carril bici y el índice de uso de bicicleta más alto del sur de España, con el eje de la Avenida de la Borbolla como columna vertebral de su red. Málaga ha triplicado su red en los últimos cinco años, superando los 80 kilómetros. El informe destaca que ambas ciudades han adoptado modelos distintos: Sevilla con infraestructura permanente y Málaga con mayor peso del urbanismo táctico temporal.",
+      "city_candidates": [
+        "Sevilla",
+        "Málaga"
+      ]
+    },
+    "expected": {
+      "scope": "regional",
+      "city": null
+    }
+  },
+  {
+    "id": "scope-006",
+    "description": "Valencia regional mobility plan that mentions Valencia city — regional framing wins",
+    "input": {
+      "headline": "La Comunitat Valenciana aprueba el Plan de Movilidad Ciclista Autonómico",
+      "text": "El Consell de la Generalitat Valenciana ha aprobado el Plan de Movilidad Ciclista de la Comunitat, que establece una red de vías verdes intermunicipales de 800 kilómetros conectando las tres provincias. El plan asigna fondos a todos los municipios valencianos con más de 5.000 habitantes para ampliar sus redes de carril bici y coordinar la señalización con los itinerarios interurbanos. Valencia capital, como principal núcleo de la red, recibirá la mayor dotación individual, pero el plan articula actuaciones en Alicante, Castellón y más de 50 municipios de toda la comunidad autónoma.",
+      "city_candidates": []
+    },
+    "expected": {
+      "scope": "regional",
+      "city": null
+    }
+  }
+]

@@ -50,6 +50,11 @@ def check(result: dict) -> tuple[bool, str | None]:
         out, used = symbols(result.get("expression") or "")
     except (ValueError, SyntaxError) as e:
         return False, f"expression: {e}"
-    declared = {v.get("symbol") for v in result.get("variables") or []}
+    variables = result.get("variables") or []
+    declared = {v.get("symbol") for v in variables}
     missing = (used | {out}) - declared
-    return (not missing), (f"undeclared symbols: {sorted(missing)}" if missing else None)
+    if missing:
+        return False, f"undeclared symbols: {sorted(missing)}"
+    upside_down = [v.get("symbol") for v in variables
+                   if isinstance(v.get("min"), (int, float)) and isinstance(v.get("max"), (int, float)) and v["min"] > v["max"]]
+    return (not upside_down), (f"min > max: {upside_down}" if upside_down else None)
